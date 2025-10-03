@@ -12,6 +12,20 @@ A System on a Chip (SoC) is like a mini-computer built on a single chip. Instead
 - **Cost Effective**: Building a single chip is often cheaper than using multiple parts, reducing the cost for manufacturers and, ultimately, for consumers.
 - **Reliable**: Fewer parts mean fewer points of failure, making devices with SoCs generally more dependable.
 
+### Where You’ll Find SoCs
+
+- **Smartphones & Tablets**: Almost all modern mobile devices use SoCs because of their compact size and efficiency.
+- **Wearables**: Devices like smartwatches rely on SoCs for their small size and low power use.
+- **IoT Gadgets**: Internet of Things devices, like smart home sensors, often use SoCs to handle tasks like monitoring and connecting to Wi-Fi.
+- **Cars, TVs, and More**: Embedded systems in cars, TVs, and appliances may also use SoCs to manage their internal functions
+
+### Popular SoCs You Might Know
+- **VSD**: VSDSquadron PRO: SiFive E3 Core, 
+- **Apple A-Series**: Powers iPhones and iPads.
+- **Qualcomm Snapdragon**: Found in many Android phones.
+- **Samsung Exynos**: Built for Samsung devices.
+- **NVIDIA Tegra**: Powers devices like the Nintendo Switch.
+
 BabySoC is a simplified, open-source SoC built around the RVMYTH processor core, a RISC-V-based CPU. It integrates a Phase-Locked Loop (PLL) for precise clock generation and a 10-bit Digital-to-Analog Converter (DAC) for interfacing with external analog systems. While the DAC allows BabySoC to interact with devices such as televisions or mobile phones by converting digital signals to analog, this task emphasizes understanding the internal digital behavior through simulation.
 
 # **Focus on:**
