@@ -39,8 +39,7 @@ Data Processing in RVMYTH: Within BabySoC, RVMYTH plays a central role in proces
 Analog Signal Generation via DAC: The DAC receives the processed digital values from RVMYTH and converts them into an analog signal. This output, saved in a file named OUT, can be fed to external devices like TVs and mobile phones, which interpret the analog signals to produce sound or video. This functionality enables BabySoC to interface with consumer electronics, showcasing how digital data can drive multimedia outputs in real-world applications.
 
 <img width="1248" height="698" alt="image" src="https://github.com/user-attachments/assets/e544b214-f91e-4afe-bfcb-0cb1155be1f8" />
-<img width="885" height="535" alt="image" src="https://github.com/user-attachments/assets/19c90319-aeec-4f5f-a7c6-9a903cd9c3e3" />
-<img width="600" height="556" alt="image" src="https://github.com/user-attachments/assets/4b748df9-6923-4faf-bfd4-625a56c5cf8b" />
+
 
 
 # 2️⃣ BabySoC Key Components
