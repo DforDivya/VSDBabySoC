@@ -49,13 +49,10 @@ BabySoC is a simplified, open-source SoC built around the RVMYTH processor core,
  - Used for visualizing simulation waveforms.
  - Helps analyze signal interactions, timing, and system behavior in a graphical form.
 
-
 # What is a System on a Chip (SoC)?
 A System on a Chip (SoC) is a highly integrated circuit that functions like a mini-computer built onto a single chip. Instead of requiring separate physical parts for each function, an SoC combines all the necessary components into one small package.
 
-This design is essential for devices where 
-
-**space, power, and efficiency** are critical, such as smartphones, smartwatches, and tablets.
+This design is essential for devices where **space, power, and efficiency** are critical, such as smartphones, smartwatches, and tablets.
 
 
 # 1️⃣ Introduction to VSDBabySoC
@@ -69,10 +66,9 @@ Analog Signal Generation via DAC: The DAC receives the processed digital values 
 
 <div align="center">
 <img width="750" height="750" alt="image" src="https://github.com/user-attachments/assets/0cf4098a-41af-470e-a421-00a7811a5402" />
-
 <div>
 
-
+---
 
 # 2️⃣ BabySoC Key Components
 The BabySoC integrates both digital and analog parts, including:
