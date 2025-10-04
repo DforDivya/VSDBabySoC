@@ -163,13 +163,21 @@ show
 ```
 iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM  -I src/include/ -I src/module/ src/module/testbench.v
 ```
-<img width="1893" height="461" alt="POST_SYNTH_SIM" src="https://github.com/user-attachments/assets/8f1531d5-04d1-4e6b-9bfd-22833d452493" />
-```
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC/output$ cd post_synth_sim/
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC/output/post_synth_sim$ ls
-post_synth_sim.out  post_synth_sim.vcd
-```
-<img width="1910" height="903" alt="POST_SYNTH_SIM_2" src="https://github.com/user-attachments/assets/abfdae8c-c282-471f-bb89-62d01b9c8b80" />
+>[!TIP] 
+-Landed in error, No worry need to change the line number where the error occured just comment after `endif completely whatever it is in the library
+
+<img width="820" height="280" alt="Image" src="https://github.com/user-attachments/assets/e82edb2d-4962-4eb1-a8cc-4ab94d10549e" />
+
+- After solution
+<img width="1220" height="650" alt="Image" src="https://github.com/user-attachments/assets/1c028fc9-1bbd-4b8c-810d-e0fd72e01094" />
+
+---
+
+<img width="818" height="311" alt="Image" src="https://github.com/user-attachments/assets/c53688d2-c7fd-4ac6-8758-eec826c9e95f" />
+
+- here your Post simutaion GLS
+
+<img width="1002" height="442" alt="Image" src="https://github.com/user-attachments/assets/9b25b535-681b-4730-bf37-329c639c0b1e" />
 
 
 # Why Pre-Synthesis and Post-Synthesis?
