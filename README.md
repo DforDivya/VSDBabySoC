@@ -3,8 +3,9 @@
  # Overview:
 A System on a Chip (SoC) is like a mini-computer built on a single chip. Instead of having separate parts for each function, an SoC combines everything into one small package. In general, the design flow of SoCs consists of: Hardware and Software Modules: Hardware blocks of SoCs are developed from pre-qualified hardware elements and software modules integrated using software development environmentThis makes it especially useful for devices where space, power, and efficiency are important, like smartphones, smartwatches, and tablets. 
 
-
-<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/d610ab0a-95dc-41c4-b526-9522df3c5eb4" />
+<center>
+  <img src="https://github.com/user-attachments/assets/d610ab0a-95dc-41c4-b526-9522df3c5eb4" alt="image" width="650" height="650">
+</center>
 
 ## Why SoCs Are Awesome? 
 - A System-on-Chip (SoC) is an integrated circuit that contains all the required electronic circuits for a fully functional system. 
