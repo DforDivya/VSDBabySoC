@@ -130,14 +130,12 @@ $ iverilog -o output/pre_synth_sim/pre_synth_sim.out   -DPRE_SYNTH_SIM   -I src/
   -  Read RTL modules
       - Synthesize top-level module
       - Write synthesized gate-level Verilog
+
 ```
-DINESH@UBUNTU:~/Desktop/my_project$ cd VSDBabySoC/
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC$ yosys
-```
-```
+bash
 yosys> read_verilog  -sv -I src/include/ -I src/module/ src/module/vsdbabysoc.v src/module/clk_gate.v src/module/rvmyth.v
 
-yosys> read_liberty -lib /home/DINESH/Desktop/Open_Source_EDA_Tool/yosys/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_liberty -lib ~./Open_Source_EDA_Tool/yosys/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 read_liberty -lib src/lib/avsddac.lib
  
