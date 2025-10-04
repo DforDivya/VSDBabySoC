@@ -24,7 +24,7 @@ A System on a Chip (SoC) is like a mini-computer built on a single chip. Instead
 - **Cars, TVs, and More**: Embedded systems in cars, TVs, and appliances may also use SoCs to manage their internal functions
 
 ### Popular SoCs You Might Know
-- **VSD**: VSDSquadron PRO: SiFive E3 Core, 
+- **VSD**: VSDSquadron PRO, VSDSquadron Ultra (MAde in India with C-DAC’s VEGA Processor),  Mini/ FM boards.
 - **Apple A-Series**: Powers iPhones and iPads.
 - **Qualcomm Snapdragon**: Found in many Android phones.
 - **Samsung Exynos**: Built for Samsung devices.
