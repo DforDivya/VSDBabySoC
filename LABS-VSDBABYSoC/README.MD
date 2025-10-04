@@ -172,7 +172,7 @@ iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM  -I src/in
 <img width="1220" height="650" alt="Image" src="https://github.com/user-attachments/assets/1c028fc9-1bbd-4b8c-810d-e0fd72e01094" />
 
 ---
-
+<img width="935" height="873" alt="Image" src="https://github.com/user-attachments/assets/b0a27d02-b301-431a-9cb9-e168556a0ffa" />
 <img width="818" height="311" alt="Image" src="https://github.com/user-attachments/assets/c53688d2-c7fd-4ac6-8758-eec826c9e95f" />
 
 - here your Post simutaion GLS
