@@ -98,6 +98,9 @@ pip install pyyaml click sandpiper-saas
 # Step 4: Convert rvmyth.tlv to Verilog
 sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 ```
+<img width="806" height="509" alt="Image" src="https://github.com/user-attachments/assets/88cad2b0-90e3-4a75-aaf3-550dfae9e141" />
+
+---
 
 # VSDBabySoC RTL to Gate-Level Simulation Flow
 
@@ -112,18 +115,12 @@ Run the following command to perform a pre-synthesis simulation:
 $ iverilog -o output/pre_synth_sim/pre_synth_sim.out   -DPRE_SYNTH_SIM   -I src/include   -I src/module   src/module/testbench.v
 ```
 
-<img width="1920" height="482" alt="PRE_SYNTH_SCREENSHOT" src="https://github.com/user-attachments/assets/49168a05-ab4d-4c3c-adfe-49c63eb38e8c" />
-
-```
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC/output$ cd pre_synth_sim/
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC/output/pre_synth_sim$ ls
-post_synth_sim.out  pre_synth_sim.out
-```
-<img width="1917" height="906" alt="PRE_SYNTH_SCREENSHOT_1" src="https://github.com/user-attachments/assets/476f7abe-fa56-47c0-8a1c-9f80fc2059c4" />
-
-<img width="1902" height="878" alt="PRE_SYNTH_SCREENSHOT_2" src="https://github.com/user-attachments/assets/003d7024-f521-4cb8-81b4-5ac5592db595" />
+<img width="1483" height="692" alt="Image" src="https://github.com/user-attachments/assets/59b6efd5-c627-4895-b86f-c0eabda7a263" />
 
 - Output: output/pre_synth_sim/pre_synth_sim.vcd (waveform if $dumpfile is used in testbench).
+
+<img width="1473" height="692" alt="Image" src="https://github.com/user-attachments/assets/61bf176b-0e5c-42bc-b05c-f4b45061dc79" />
+
 - This is your reference RTL behavior.
 
 # 2️⃣ RTL Synthesis using Yosys
@@ -156,7 +153,7 @@ abc -liberty src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 show 
 ```
-<img width="1917" height="830" alt="image" src="https://github.com/user-attachments/assets/64c29aa6-3b43-4851-b258-ca2044340033" />
+
 
 # 3️⃣ Post-Synthesis Simulation:
    - Compile synthesized netlist + standard cells with Icarus Verilog
