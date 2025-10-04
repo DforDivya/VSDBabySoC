@@ -66,7 +66,7 @@ Analog Signal Generation via DAC: The DAC receives the processed digital values 
 
 <div align="center">
 <img width="750" height="750" alt="image" src="https://github.com/user-attachments/assets/0cf4098a-41af-470e-a421-00a7811a5402" />
-<div>
+</div>
 
 ---
 
