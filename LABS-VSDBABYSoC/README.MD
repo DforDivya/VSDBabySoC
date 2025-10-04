@@ -1,36 +1,28 @@
-# ⚡VSDBabySoC Simulation & Synthesis Flow
-# Project Structure
+# ⚡VSDBabySoC Simulation & Synthesis Flow LAB 
+- VSDBabySoC is a small SoC including PLL, DAC, and a RISCV-based processor named RVMYTH.
+- Task to simulate and check the timing waveforms and later synthesise and check the GLS with RTL.
+- USING THE TOOLS LIKE iverilog and GTKwave only.
+
+# Step by step modeling walkthrough
+
+## Setup and Prepare Project Directory
+- Clone or set up the directory structure as follows:
+# 🔗 Cloning 
+To begin, clone the VSDBabySoC repository using the following command:
+```
+$ git clone https://github.com/manili/VSDBabySoC.git
+$ cd ~/vcd/VSDBabySoC/
+$ ls VSDBabySoC/
+images  LICENSE  Makefile  README.md  src
+```
+## Project Structure
 - **src/include/** - Contains header files (*.vh) with necessary macros or parameter definitions.
 - **src/module/** - Contains Verilog files for each module in the SoC design.
 - **output/** - Directory where compiled outputs and simulation files will be generated.
 
- #Setup and Prepare Project Directory
-  Clone or set up the directory structure as follows:
-
-```
-https://github.com/manili/VSDBabySoC.git
-```
-
 ```
 bash
-├── copy_past.txt
-├── images
-│   ├── centralized_avsddac.png
-│   ├── inside_dac.png
-│   ├── inside_pll.png
-│   ├── openlane_flow.png
-│   ├── physical_design.png
-│   ├── post_routing_sim.png
-│   ├── post_synth_sim.png
-│   ├── pre_synth_sim.png
-│   ├── rvmyth_layout.png
-│   ├── selected_dac.png
-│   ├── selected_pll.png
-│   ├── vsdbabysoc_block_diagram.png
-│   └── vsdbabysoc_layout.png
-├── LICENSE
-├── Makefile
-├── my_project_images
+
 ├── output
 │   ├── post_synth_sim
 │   │   ├── post_synth_sim.out
@@ -39,43 +31,8 @@ bash
 │       ├── mkdir
 │       ├── post_synth_sim.out
 │       └── pre_synth_sim.out
-├── output_@
-│   ├── post_synth_sim
-│   │   ├── post_routing_sim.vcd
-│   │   └── post_synth_sim.out
-│   └── pre_synth_sim
-│       ├── post_synth_sim.vcd
-│       ├── pre_synth_sim.out
-│       └── pre_synth_sim.vcd
-├── README.md
-├── sp_env
+├── dv_env
 │   ├── bin
-│   │   ├── activate
-│   │   ├── activate.csh
-│   │   ├── activate.fish
-│   │   ├── Activate.ps1
-│   │   ├── normalizer
-│   │   ├── pip
-│   │   ├── pip3
-│   │   ├── pip3.12
-│   │   ├── python -> python3
-│   │   ├── python3 -> /usr/bin/python3
-│   │   ├── python3.12 -> python3
-│   │   └── sandpiper-saas
-│   ├── include
-│   │   └── python3.12
-│   ├── lib
-│   │   └── python3.12
-│   │       └── site-packages
-│   ├── lib64 -> lib
-│   └── pyvenv.cfg
-├── src
-│   ├── gds
-│   │   ├── avsddac.gds
-│   │   └── avsdpll.gds
-│   ├── gls_model
-│   │   ├── primitives.v
-│   │   └── sky130_fd_sc_hd.v
 │   ├── include
 │   │   ├── sandpiper_gen.vh
 │   │   ├── sandpiper.vh
@@ -118,27 +75,6 @@ bash
 │   └── sdc
 │       ├── vsdbabysoc_layout.sdc
 │       └── vsdbabysoc_synthesis.sdc
-├── vsdbabysoc.synth_1.v
-└── vsdbabysoc.synth.v
-```
-
-# 🔗 Cloning the Project
-To begin, clone the VSDBabySoC repository using the following command:
-```
-git clone https://github.com/manili/VSDBabySoC.git
-
-cd ~/VLSI/VSDBabySoC/
-
-ls VSDBabySoC/
-images  LICENSE  Makefile  README.md  src
-
-DINESH@UBUNTU:~/Desktop/my_project$ cd VSDBabySoC/
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC$ ls
-copy_past.txt  images  LICENSE  Makefile  my_project_images  output  output_@  README.md  sp_env  src  vsdbabysoc.synth_1.v  vsdbabysoc.synth.v
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC$ cd src/module/
-DINESH@UBUNTU:~/Desktop/my_project/VSDBabySoC/src/module$ l
-avsddac.v  clk_gate.v    pseudo_rand_gen.sv  rvmyth_gen.v  rvmyth.v           testbench.rvmyth.post-routing.v  vsdbabysoc.synth.v
-avsdpll.v  primitives.v  pseudo_rand.sv      rvmyth.tlv    sky130_fd_sc_hd.v  testbench.v*                     vsdbabysoc.v
 ```
 
 # TLV to Verilog Conversion for RVMYTH
@@ -150,10 +86,10 @@ To convert it into a .v file for simulation, follow the steps below:
 # Step 1: Install python3-venv (if not already installed)
 sudo apt update
 sudo apt install python3-venv python3-pip
+cd VSDBabySoC/
 
 # Step 2: Create and activate a virtual environment
-cd VSDBabySoC/
-python3 -m venv sp_env
+python3 -m venv dv_env
 source sp_env/bin/activate
 
 # Step 3: Install SandPiper-SaaS inside the virtual environment
@@ -162,18 +98,20 @@ pip install pyyaml click sandpiper-saas
 # Step 4: Convert rvmyth.tlv to Verilog
 sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 ```
+
 # VSDBabySoC RTL to Gate-Level Simulation Flow
 
 # 1️⃣ Pre-Synthesis Simulation:
    - Compile RTL with Icarus Verilog
-   - Macro: -DPRE_SYNTH_SIM
-   - Purpose: Verify RTL functionality before synthesis
-   - Output: output/pre_synth_sim/pre_synth_sim.out and waveform .vcd
+   - **Macro** requied: -DPRE_SYNTH_SIM
+   - **Purpose**: Verify RTL functionality before synthesis
+   - **Output**: output/pre_synth_sim/pre_synth_sim.out and waveform .vcd
  
 Run the following command to perform a pre-synthesis simulation:
 ```
-iverilog -o output/pre_synth_sim/pre_synth_sim.out   -DPRE_SYNTH_SIM   -I src/include   -I src/module   src/module/testbench.v
+$ iverilog -o output/pre_synth_sim/pre_synth_sim.out   -DPRE_SYNTH_SIM   -I src/include   -I src/module   src/module/testbench.v
 ```
+
 <img width="1920" height="482" alt="PRE_SYNTH_SCREENSHOT" src="https://github.com/user-attachments/assets/49168a05-ab4d-4c3c-adfe-49c63eb38e8c" />
 
 ```
