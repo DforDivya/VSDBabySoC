@@ -99,7 +99,10 @@ The main use of the BabySoC is tied to its capability for digital-analog interfa
 - Application-Specific SoC (ASIC): Designed for specialized, high-performance tasks, these SoCs excel in areas such as graphics processing, network management, and multimedia applications. Optimized for speed and efficiency in their specific roles, they are often deployed in graphics cards, AI accelerators, and specialized industrial or financial systems that demand fast and precise computation.
 
 **SoC Design Flow**
-<img width="867" height="1305" alt="image" src="https://github.com/user-attachments/assets/b221cb54-f8c0-42ff-997a-0a76b463a822" />
+
+<div align="center">
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/05ff4310-6e8c-44ce-b623-20b2f47f365b" />
+</div>
 
 
 # ⚡Key Parts of a General System on a Chip (SoC)
