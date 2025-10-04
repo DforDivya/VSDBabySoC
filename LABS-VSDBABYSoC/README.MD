@@ -90,7 +90,7 @@ cd VSDBabySoC/
 
 # Step 2: Create and activate a virtual environment
 python3 -m venv dv_env
-source sp_env/bin/activate
+source dv_env/bin/activate
 
 # Step 3: Install SandPiper-SaaS inside the virtual environment
 pip install pyyaml click sandpiper-saas
