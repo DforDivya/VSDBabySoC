@@ -1,4 +1,4 @@
-# 🚀 WEEK_2: About Soc and Labs on VSDBabySoC
+<img width="685" height="1063" alt="image" src="https://github.com/user-attachments/assets/e8649795-0a82-4bed-8325-022f9573fd09" /># 🚀 WEEK_2: About Soc and Labs on VSDBabySoC
 
  # Overview:
 A System on a Chip (SoC) is like a mini-computer built on a single chip. Instead of having separate parts for each function, an SoC combines everything into one small package. In general, the design flow of SoCs consists of: Hardware and Software Modules: Hardware blocks of SoCs are developed from pre-qualified hardware elements and software modules integrated using software development environmentThis makes it especially useful for devices where space, power, and efficiency are important, like smartphones, smartwatches, and tablets. 
@@ -56,6 +56,7 @@ This design is essential for devices where **space, power, and efficiency** are 
 
 
 # 1️⃣ Introduction to VSDBabySoC
+
 **The VSDBabySoC (or BabySoC)** is a small yet highly capable SoC with a primary objective of being an educational platform. It was designed to facilitate the simultaneous testing of three specific open-source intellectual property (IP) cores for the first time while also allowing for the calibration of its analog components.
 
 Initialization and Clock Generation: Upon receiving an initial input signal, BabySoC activates the PLL. The PLL generates a stable and synchronized clock signal, which is essential for coordinating the activities of the RVMYTH processor and DAC. By synchronizing the system, the PLL ensures that all components operate in harmony, avoiding timing mismatches and ensuring data integrity.
