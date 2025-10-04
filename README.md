@@ -101,7 +101,7 @@ The main use of the BabySoC is tied to its capability for digital-analog interfa
 **SoC Design Flow**
 
 <div align="center">
-<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/05ff4310-6e8c-44ce-b623-20b2f47f365b" />
+<img width="685" height="1063" alt="image" src="https://github.com/user-attachments/assets/c25a754a-a2e2-4b92-a49b-d407b5bfa8d5" />
 </div>
 
 
