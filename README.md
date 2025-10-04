@@ -1,4 +1,4 @@
-<img width="685" height="1063" alt="image" src="https://github.com/user-attachments/assets/e8649795-0a82-4bed-8325-022f9573fd09" /># 🚀 WEEK_2: About Soc and Labs on VSDBabySoC
+# 🚀 WEEK_2: About Soc and Labs on VSDBabySoC
 
  # Overview:
 A System on a Chip (SoC) is like a mini-computer built on a single chip. Instead of having separate parts for each function, an SoC combines everything into one small package. In general, the design flow of SoCs consists of: Hardware and Software Modules: Hardware blocks of SoCs are developed from pre-qualified hardware elements and software modules integrated using software development environmentThis makes it especially useful for devices where space, power, and efficiency are important, like smartphones, smartwatches, and tablets. 
@@ -102,7 +102,7 @@ The main use of the BabySoC is tied to its capability for digital-analog interfa
 **SoC Design Flow**
 
 <div align="center">
-<img width="685" height="1063" alt="image" src="https://github.com/user-attachments/assets/c25a754a-a2e2-4b92-a49b-d407b5bfa8d5" />
+<img width="685" height="1063" alt="image" src="https://github.com/user-attachments/assets/e8649795-0a82-4bed-8325-022f9573fd09" />
 </div>
 
 
